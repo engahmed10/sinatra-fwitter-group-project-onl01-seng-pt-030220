@@ -1,2 +1,5 @@
-Welcome,"tweeting!"
-"look at this tweet"
+Welcome, <%=@current_user.username%><br><br>
+<br>look at this tweet :<br>
+<%@current_user.tweets.each do |tweet|%>
+  <%=tweet.content%><br>
+<% end %>

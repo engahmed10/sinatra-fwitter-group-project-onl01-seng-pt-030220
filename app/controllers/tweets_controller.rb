@@ -1,10 +1,11 @@
 class TweetsController < ApplicationController
 
 get "/tweets" do
-
+  
   if  !session[:user_id]
        redirect "/login"
   end
+     @current_user=Helpers.current_user(session)
     erb :'/tweets/index'
 end
 

@@ -1,1 +1,10 @@
-<a href="/signup">signup</a>
+<div>
+<% if !Helpers.is_logged_in?(session)%>
+   <h1>Please signing or signup below:</h1>
+    <a href="/signup">Sign Up</a>
+      <br>or<br>
+      <a href="/login"> Sign In</a>
+  <% else %>
+        <a href="/logout">Log out</a><br>
+   <% end %>
+</div>
